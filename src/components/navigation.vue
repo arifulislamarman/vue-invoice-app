@@ -20,7 +20,7 @@ header {
 
   @media (min-width: 900px) {
     min-height: 100%;
-    min-width: 90px;
+    min-width: 80px;
     flex-direction: column;
     border-radius: 0 20px 20px 0;
   }
@@ -31,8 +31,9 @@ header {
     justify-content: center;
     padding: 24px;
     position: relative;
+    width: 100%;
     @media (min-width: 900px) {
-      width: 100%;
+      width: auto;
     }
     img {
       width: auto;

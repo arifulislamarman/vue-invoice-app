@@ -1,6 +1,6 @@
 <template>
   <div id="main-container">
-    <div class="app flex">
+    <div class="app flex flex-column">
       <navigation />
       <div class="app-content">
         <router-view />
@@ -31,6 +31,13 @@ export default {
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
 body {
   background: #141625;
   color: #fff;
@@ -54,5 +61,15 @@ body {
 }
 .flex-column {
   flex-direction: column;
+}
+
+.container {
+  width: 100%;
+  padding: 40px 10px;
+  max-width: 850px;
+  margin: 0 auto;
+  @media (min-width: 900px) {
+    padding-top: 72px;
+  }
 }
 </style>
