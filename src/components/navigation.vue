@@ -9,7 +9,9 @@
 <script>
 export default {
   name: "Navigation",
-  data() {},
+  data() {
+    return {};
+  },
 };
 </script>
 

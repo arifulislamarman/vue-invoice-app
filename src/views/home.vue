@@ -17,7 +17,7 @@
             <li>Clear</li>
           </ul>
         </div>
-        <div class="button flex">
+        <div @click="newInvoice" class="button flex">
           <div class="inner-button flex">
             <img src="@/assets/images/icon-plus.svg" alt="" />
           </div>
@@ -29,6 +29,8 @@
 </template>
 
 <script>
+import { mapMutations } from "vuex";
+
 export default {
   name: "Home",
   data() {
@@ -37,10 +39,15 @@ export default {
     };
   },
   methods: {
+    ...mapMutations(["toggle_model"]),
     statusToggle() {
       this.showStatus = !this.showStatus;
     },
+    newInvoice() {
+      this.toggle_model();
+    },
   },
+  computed: {},
 };
 </script>
 

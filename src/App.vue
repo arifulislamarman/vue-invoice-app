@@ -4,7 +4,7 @@
       <navigation />
       <div class="app-content">
         <transition name="invoice">
-          <InvoiceModal v-if="!invoiceModal" />
+          <InvoiceModal v-if="invoiceModal" />
         </transition>
         <router-view />
       </div>
@@ -15,23 +15,27 @@
 <script>
 import Navigation from "./components/navigation.vue";
 import InvoiceModal from "./components/invoiceModal.vue";
-
+import { mapState, mapActions } from "vuex";
 export default {
   name: "vue invoice",
-  components: {
-    Navigation,
-    InvoiceModal,
-  },
+
   data() {
     return {
       msg: "Welcome to our Invoice App",
       hello: "welcome",
     };
   },
-  methods: {
-    onclick() {},
+  methods: {},
+  computed: {
+    ...mapState(["invoiceModal"]),
+  },
+  components: {
+    Navigation,
+    InvoiceModal,
   },
 };
+
+//console.log(this.InvoiceModal);
 </script>
 
 <style lang="scss">
